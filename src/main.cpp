@@ -5,16 +5,16 @@ int main(){
     Empresa cliente;
     int tipoCliente;
     char tipoServicio;
-    float cantidadHoras;
+    float cantidadHoras = 0;
 
     std::cout << "Ingrese tipo de cliente: (1)Nacional, (2)Internacional:";
     std::cin >> tipoCliente;
 
-    if(tipoCliente == 2){
-        cliente = Empresa("Empresa internacional", 2);
+    if(tipoCliente == 1){
+        cliente = Empresa("Empresa nacional", 13);
         
-    } else if(tipoCliente == 1){
-        cliente = Empresa("Empresa nacional");
+    } else if(tipoCliente == 2){
+        cliente = Empresa("Empresa internacional");
     } else {
         std::cout << "Sin tipo de cliente" << std::endl;
         return 0;

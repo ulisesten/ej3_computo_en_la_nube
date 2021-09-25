@@ -25,6 +25,8 @@ void Empresa::setPrecio(char tipoServicio, int horas){
         break;
     
     default:
+        precioBase = horas * bajo_demanda;
+        std::cout << "Sin tipo de servicio. (Default)Bajo demanda." << std::endl;
         break;
     }
 }
