@@ -10,9 +10,10 @@ class Empresa {
         float reservadas;
         float puntuales;
         int   empresaTipo = 1;
-        int impuesto = 0;
-        float descuento = 0.0;
-        float precioBase = 0.0;
+        float impuesto    = 0.0;
+        float descuento   = 0.0;
+        float precioBase  = 0.0;
+        float horas;
 
     public:
         /**Empresa nacional*/
@@ -21,7 +22,7 @@ class Empresa {
             bajo_demanda = 0.140;
             reservadas = 0.063;
             puntuales = 0.029;
-            impuesto = impuesto;
+            this->impuesto = impuesto;
             std::cout << "Cliente Nacional" << std::endl;
         };
 
@@ -31,8 +32,9 @@ class Empresa {
             bajo_demanda = 0.158;
             reservadas = 0.072;
             puntuales = 0.038;
+            impuesto = 0.0;
             
-            std::cout << "Cliente internacional" << std::endl;
+            std::cout << "Cliente Internacional" << std::endl;
         };
 
         Empresa(){};
@@ -42,13 +44,6 @@ class Empresa {
         void  aplicarPromocion();
         float getPrecioBase();
         float getPago();
-
-    /**horas <= 168 : 10%
-
-    horas > 168 && <= 360 : 15%
-
-    horas > 360 : 20%;*/
-
 
 };
 

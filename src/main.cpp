@@ -30,5 +30,9 @@ int main(){
 
     std::cout << "Precio base: " << cliente.getPrecioBase() << std::endl;
 
+    cliente.aplicarPromocion();
+
+    std::cout << "Pago: " << cliente.getPago() << std::endl;
+
     return 0;
 }
